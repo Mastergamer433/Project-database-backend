@@ -31,7 +31,7 @@ app.get('/projects', (req,res)=>{
 	res.send(200,db)
 })
 
-app.post('/remove', (req,res)=>{
+app.delete('/remove', (req,res)=>{
 	const db = require('./db.json')
 	for(let i=0;i<db.length;i++){
 		if(db[i].id==req.body.id){
